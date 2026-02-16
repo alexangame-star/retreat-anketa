@@ -1238,6 +1238,12 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     console.log('✅ WES Retreat Survey Submitted:', JSON.stringify(answers, null, 2));
+
+    var SHEET_URL = 'https://script.google.com/macros/s/AKfycbzr7dnG6Si0Pbb3lrDbMGo7UCfbnOZagozLsfD9YjaZZBd8gpq3mMA-NxziRge87rGf/exec';
+
+    var img = new Image();
+    img.src = SHEET_URL + '?data=' + encodeURIComponent(JSON.stringify(answers));
+    console.log('✅ Дані відправлено в таблицю');
   }
 </script>
 </body>
